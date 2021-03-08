@@ -12,12 +12,12 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author ivan
- * @since 2021-03-06
+ * @since 2021-03-07
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("t_user")
-public class User implements Serializable {
+@TableName("t_sys_user")
+public class SysUser implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -72,9 +72,14 @@ public class User implements Serializable {
     private String deptId;
 
     /**
-     * 创建人
+     * 创建人ID
      */
-    private Long createUser;
+    private Long createUserId;
+
+    /**
+     * 创建人姓名
+     */
+    private String createUserName;
 
     /**
      * 创建时间
@@ -82,9 +87,14 @@ public class User implements Serializable {
     private LocalDateTime createTime;
 
     /**
-     * 修改人
+     * 修改人ID
      */
-    private Long updateUser;
+    private Long updateUserId;
+
+    /**
+     * 修改人姓名
+     */
+    private String updateUserName;
 
     /**
      * 修改时间
@@ -97,9 +107,9 @@ public class User implements Serializable {
     private Integer status;
 
     /**
-     * 是否已删除
+     * 是否已删除(0-未删除，1-已删除)
      */
-    private Integer isDeleted;
+    private Integer deleted;
 
 
 }

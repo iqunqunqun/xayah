@@ -9,11 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>xayah-service</artifactId>
+    <artifactId>xayah-service-api</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>xayah-upms</module>
-        <module>xayah-system</module>
+        <module>xayah-upms-api</module>
+        <module>xayah-system-api</module>
     </modules>
 
     <properties>
@@ -22,17 +22,6 @@
     </properties>
 
     <dependencies>
-        <!--spring web-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <!--mysql-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
 
         <!--mybatis plus-->
         <dependency>
@@ -40,10 +29,10 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
 
-        <!-- Redis -->
+        <!--hibernate-validator-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
 
         <!--xayah-common-core-->
@@ -53,5 +42,14 @@
             <version>${xayah.common.version}</version>
             <scope>compile</scope>
         </dependency>
+
+        <!--xayah-common-core-->
+        <dependency>
+            <groupId>com.ivan</groupId>
+            <artifactId>xayah-common-mybatis</artifactId>
+            <version>${xayah.common.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
     </dependencies>
 </project>

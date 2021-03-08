@@ -3,11 +3,11 @@ package com.ivan.xayah.tool.api;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.http.HttpStatus;
 import com.ivan.xayah.tool.constant.CommonConstant;
-import com.sun.istack.internal.Nullable;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.lang.Nullable;
 
 import java.io.Serializable;
 import java.util.Optional;

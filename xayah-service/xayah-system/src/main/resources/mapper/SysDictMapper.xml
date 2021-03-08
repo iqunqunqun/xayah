@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ivan.xayah.mapper.SysDictMapper">
+
+    <select id="initDict" resultType="com.ivan.xayah.tool.init.dict.DictItem">
+        SELECT
+            tsd.dict_code       dictCode,
+            tsd.dict_value      dictValue,
+            tsd.dict_desc       dictDesc,
+            tsd.category_code   categoryCode,
+            tsd.category_desc   categoryDesc,
+            tsd.sort            sort
+        FROM
+            t_sys_dict AS tsd
+        WHERE
+            tsd.`status` = 1;
+    </select>
+
+</mapper>

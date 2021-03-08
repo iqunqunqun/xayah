@@ -1,6 +1,8 @@
 package com.ivan.xayah.tool.api;
 
-import com.ivan.pinellia.tool.api.annotation.CustomResponse;
+import cn.hutool.json.JSONUtil;
+import com.ivan.xayah.tool.api.annotation.CustomResponse;
+import com.ivan.xayah.tool.constant.CommonConstant;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
@@ -51,7 +53,8 @@ public class CustomResponseAdvice implements ResponseBodyAdvice {
      * @return
      */
     @Override
-    public Object beforeBodyWrite(Object body, MethodParameter methodParameter,
+    public Object beforeBodyWrite(Object body,
+                                  MethodParameter methodParameter,
                                   MediaType mediaType,
                                   Class aClass,
                                   ServerHttpRequest serverHttpRequest,

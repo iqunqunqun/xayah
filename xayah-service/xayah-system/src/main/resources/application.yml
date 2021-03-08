@@ -1,0 +1,26 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: system-service
+
+  # datasource
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://rm-8vbkeos92871524q0mo.mysql.zhangbei.rds.aliyuncs.com:3306/xayah_upms?useUnicode=true&useSSL=false&characterEncoding=utf8
+    username: chenyifan
+    password: aini1314liliqun
+    # 多数据源
+    dynamic:
+      primary: upms
+      strict: false #设置严格模式,默认false不启动. 启动后在未匹配到指定数据源时候会抛出异常,不启动则使用默认数据源.
+      datasource:
+        upms:
+          url: jdbc:mysql://rm-8vbkeos92871524q0mo.mysql.zhangbei.rds.aliyuncs.com:3306/xayah_upms?useUnicode=true&useSSL=false&characterEncoding=utf8
+          username: chenyifan
+          password: aini1314liliqun
+          driver-class-name: com.mysql.cj.jdbc.Driver # 3.2.0开始支持SPI可省略此配置
+# mybatis plus
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml

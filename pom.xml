@@ -10,6 +10,7 @@
     <version>1.0.0-SNAPSHOT</version>
     <modules>
         <module>xayah-service</module>
+        <module>xayah-service-api</module>
         <module>xayah-common</module>
     </modules>
 
@@ -36,6 +37,10 @@
         <!--mybatis plus end-->
         <!--hutool-->
         <hutool.version>5.5.9</hutool.version>
+        <!--common-core-->
+        <xayah.common.version>1.0.0-SNAPSHOT</xayah.common.version>
+        <!--xayah-api-->
+        <xayah.api.version>1.0.0-SNAPSHOT</xayah.api.version>
     </properties>
 
     <dependencyManagement>

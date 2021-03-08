@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>xayah-upms</artifactId>
+    <artifactId>xayah-system</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -19,10 +19,9 @@
     <dependencies>
         <dependency>
             <groupId>com.ivan</groupId>
-            <artifactId>xayah-upms-api</artifactId>
+            <artifactId>xayah-system-api</artifactId>
             <version>${xayah.api.version}</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
-
 </project>
