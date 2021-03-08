@@ -36,7 +36,6 @@ public class DictUtil {
                 .findFirst();
 
         return first.orElse(null);
-
     }
 
 }
