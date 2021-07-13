@@ -16,4 +16,26 @@
             tsd.`status` = 1;
     </select>
 
+    <select id="pageDict" resultType="com.ivan.xayah.vo.DictVO">
+        SELECT
+            tsd.dict_id             dictId,
+            tsd.category_code       categoryCode,
+            tsd.category_desc       categoryDesc,
+            tsd.dict_code           dictCode,
+            tsd.dict_value          dictValue,
+            tsd.dict_desc           dictDesc,
+            tsd.sort                sort,
+            tsd.`status`            status
+        FROM
+            t_sys_dict tsd
+        <where>
+            <if test="dictQuery.categoryCode != null and dictQuery.categoryCode != ''">
+                tsd.category_code = #{dictQuery.categoryCode}
+            </if>
+
+            <if test="dictQuery.categoryDesc != null and dictQuery.categoryDesc != ''">
+                tsd.category_desc = #{categoryDesc}
+            </if>
+        </where>
+    </select>
 </mapper>

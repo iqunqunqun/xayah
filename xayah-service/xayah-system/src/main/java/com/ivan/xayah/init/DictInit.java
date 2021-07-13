@@ -23,7 +23,7 @@ public class DictInit implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        log.info("===================字典初始化至内存===================");
+        log.info("===================加载字典进行初始化===================");
         dictService.init();
     }
 }

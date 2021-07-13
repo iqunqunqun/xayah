@@ -1,19 +1,17 @@
-package com.ivan.xayah.controller;
+package com.ivan.xayah.user.controller;
 
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.ivan.xayah.entity.SysUser;
 import com.ivan.xayah.query.SysUserQuery;
-import com.ivan.xayah.service.ISysUserService;
+import com.ivan.xayah.user.service.ISysUserService;
 import com.ivan.xayah.tool.api.annotation.CustomResponse;
 import com.ivan.xayah.tool.init.dict.DictItem;
 import com.ivan.xayah.tool.init.dict.DictUtil;
 import com.ivan.xayah.vo.SysUserVO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -31,6 +29,9 @@ public class SysUserController {
 
     @Autowired
     private ISysUserService userService;
+
+    @Autowired
+    private DictUtil dictUtil;
 
     /**
      * 获取用户列表
@@ -57,7 +58,7 @@ public class SysUserController {
     @CustomResponse
     @GetMapping
     public DictItem getDictByCode() {
-        DictItem dictItem = DictUtil.getItemByCategoryAndDict("status", "close");
+        DictItem dictItem = dictUtil.getItemByCategoryAndDict("test", "test");
         return dictItem;
     }
 }

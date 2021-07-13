@@ -1,4 +1,4 @@
-package com.ivan.xayah.mapper;
+package com.ivan.xayah.user.mapper;
 
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;

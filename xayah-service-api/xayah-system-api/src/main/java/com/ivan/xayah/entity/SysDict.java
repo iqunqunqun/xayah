@@ -1,9 +1,12 @@
 package com.ivan.xayah.entity;
 
 
+import cn.hutool.core.bean.BeanUtil;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.ivan.xayah.mybatis.base.BaseEntity;
+import com.ivan.xayah.tool.init.dict.DictItem;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -21,7 +24,7 @@ import java.io.Serializable;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @TableName("t_sys_dict")
-public class SysDict implements Serializable {
+public class SysDict extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -66,35 +69,11 @@ public class SysDict implements Serializable {
      */
     private Integer status;
 
-    /**
-     * 创建人ID
-     */
-    private Long createUserId;
-
-    /**
-     * 修改人ID
-     */
-    private Long updateUserId;
-
-    /**
-     * 创建人姓名
-     */
-    private String createUserName;
-
-    /**
-     * 修改人姓名
-     */
-    private String updateUserName;
-
-    /**
-     * 创建时间
-     */
-    private LocalDateTime createTime;
-
-    /**
-     * 更新时间
-     */
-    private LocalDateTime updateTime;
+    public static DictItem convert2DictItem(SysDict sysDict) {
+        DictItem dictItem = new DictItem();
+        BeanUtil.copyProperties(sysDict, dictItem);
+        return dictItem;
+    }
 
 
 }

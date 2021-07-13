@@ -3,6 +3,8 @@ package com.ivan.xayah.tool.init.dict;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.io.Serializable;
+
 /**
  * <p></p>
  *
@@ -13,7 +15,7 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class DictItem {
+public class DictItem implements Serializable {
 
     /**
      * 字典编码

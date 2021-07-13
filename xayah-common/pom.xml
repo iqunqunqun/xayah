@@ -15,6 +15,8 @@
         <module>xayah-common-core</module>
         <module>xayah-common-mybatis</module>
         <module>xayah-common-log</module>
+        <module>xayah-common-thread</module>
+        <module>xayah-common-message</module>
     </modules>
 
     <properties>

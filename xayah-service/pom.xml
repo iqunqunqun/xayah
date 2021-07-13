@@ -22,10 +22,23 @@
     </properties>
 
     <dependencies>
+
+        <!--nacos discovery-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
         <!--spring web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!--feign 依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
         <!--mysql-->
@@ -53,5 +66,14 @@
             <version>${xayah.common.version}</version>
             <scope>compile</scope>
         </dependency>
+
+        <!--xayah-common-core-->
+        <dependency>
+            <groupId>com.ivan</groupId>
+            <artifactId>xayah-common-log</artifactId>
+            <version>${xayah.common.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
     </dependencies>
 </project>

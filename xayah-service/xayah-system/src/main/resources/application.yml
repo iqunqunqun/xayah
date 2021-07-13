@@ -8,8 +8,8 @@ spring:
   # datasource
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://rm-8vbkeos92871524q0mo.mysql.zhangbei.rds.aliyuncs.com:3306/xayah_upms?useUnicode=true&useSSL=false&characterEncoding=utf8
-    username: chenyifan
+    url: jdbc:mysql://192.168.122.88:32000/xayah_upms?useUnicode=true&useSSL=false&characterEncoding=utf8
+    username: root
     password: aini1314liliqun
     # 多数据源
     dynamic:
@@ -17,10 +17,23 @@ spring:
       strict: false #设置严格模式,默认false不启动. 启动后在未匹配到指定数据源时候会抛出异常,不启动则使用默认数据源.
       datasource:
         upms:
-          url: jdbc:mysql://rm-8vbkeos92871524q0mo.mysql.zhangbei.rds.aliyuncs.com:3306/xayah_upms?useUnicode=true&useSSL=false&characterEncoding=utf8
-          username: chenyifan
+          url: jdbc:mysql://192.168.122.88:32000/xayah_upms?useUnicode=true&useSSL=false&characterEncoding=utf8
+          username: root
           password: aini1314liliqun
           driver-class-name: com.mysql.cj.jdbc.Driver # 3.2.0开始支持SPI可省略此配置
+
+  # redis
+  redis:
+    host: r-wz984dff193b52e4pd.redis.rds.aliyuncs.com
+    port: 6379
+    password: Aini1314liliqun
+
+  cloud:
+    # nacos
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
 # mybatis plus
 mybatis-plus:
   mapper-locations: classpath*:mapper/*.xml

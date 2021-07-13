@@ -1,4 +1,4 @@
-package com.ivan.xayah.service;
+package com.ivan.xayah.user.service;
 
 import com.baomidou.dynamic.datasource.annotation.DS;
 import com.baomidou.mybatisplus.core.metadata.IPage;

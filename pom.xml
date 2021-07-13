@@ -41,6 +41,8 @@
         <xayah.common.version>1.0.0-SNAPSHOT</xayah.common.version>
         <!--xayah-api-->
         <xayah.api.version>1.0.0-SNAPSHOT</xayah.api.version>
+        <!--easy poi-->
+        <easy.poi.version>4.1.2</easy.poi.version>
     </properties>
 
     <dependencyManagement>
@@ -93,6 +95,20 @@
                 <version>${freemarker.version}</version>
             </dependency>
             <!--mybatis plus end-->
+
+            <!--easy poi start-->
+            <dependency>
+                <groupId>cn.afterturn</groupId>
+                <artifactId>easypoi-spring-boot-starter</artifactId>
+                <version>${easy.poi.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.afterturn</groupId>
+                <artifactId>easypoi-web</artifactId>
+                <version>${easy.poi.version}</version>
+            </dependency>
+            <!--easy poi end-->
         </dependencies>
     </dependencyManagement>
 

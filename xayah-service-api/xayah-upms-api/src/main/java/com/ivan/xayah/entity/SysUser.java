@@ -3,6 +3,8 @@ package com.ivan.xayah.entity;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.time.LocalDateTime;
 import java.io.Serializable;
+
+import com.ivan.xayah.mybatis.base.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -17,7 +19,7 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @TableName("t_sys_user")
-public class SysUser implements Serializable {
+public class SysUser extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -71,35 +73,6 @@ public class SysUser implements Serializable {
      */
     private String deptId;
 
-    /**
-     * 创建人ID
-     */
-    private Long createUserId;
-
-    /**
-     * 创建人姓名
-     */
-    private String createUserName;
-
-    /**
-     * 创建时间
-     */
-    private LocalDateTime createTime;
-
-    /**
-     * 修改人ID
-     */
-    private Long updateUserId;
-
-    /**
-     * 修改人姓名
-     */
-    private String updateUserName;
-
-    /**
-     * 修改时间
-     */
-    private LocalDateTime updateTime;
 
     /**
      * 状态(0-禁用，1-启用)
